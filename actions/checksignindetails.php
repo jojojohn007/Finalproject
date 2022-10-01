@@ -6,35 +6,42 @@ $email = $_POST['email'] ;
 $password = $_POST['password'];
 
 
-$dataselect = 'SELECT * FROM students WHERE email="'.$email.'" and password ="'.$password.'"  ' ;
+$dataselect = 'SELECT * FROM students WHERE email="'.$email.'"  ' ;
+
+
 
 $sql = $conn->query($dataselect);
 
 $row = mysqli_fetch_assoc($sql) ;
 
-if($row){
+$proceed = password_verify($password,$row['password']) ;
+
+if($proceed){
 
     include '../sqlcon_sesSt/sessionSt.php';
 
    
-        $_SESSION['username'] = $username ;
+        $_SESSION['username'] = $row['student_name'];
         $_SESSION['password'] =$password ;
-        $_SESSION['id'] =$row['id'];
-        $_SESSION['profile'] =$profile ;
         $_SESSION['email'] =$email ;
-        $_SESSION['sapid'] =$sapId  ;
-        $_SESSION['cgpa'] =$cgsp ;
-        $_SESSION['contact'] =$contact ;
+        $_SESSION['mNumber'] =$row['mNumber'] ;
     
     
     
     
     
-        header('location:home.php');
+        header('location:../learner/home/learnershome.php');
         
+    }else if($row['email']) {
+        include '../sqlcon_sesSt/sessionSt.php';
+        $_SESSION['message']='Please enter your password correctly and try again';
+        header('location:../msg/usernotfound.php');
     }else {
+        include '../sqlcon_sesSt/sessionSt.php';
+        $_SESSION['message']='Sorry,User not found check your email ,password then try again...';
         header('location:../msg/usernotfound.php');
     }
+
 
 
 ?>

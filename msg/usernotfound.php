@@ -1,3 +1,5 @@
+
+<?php include '../sqlcon_sesSt/sessionSt.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +16,15 @@
 
 
     
-<h1>User not found chech your email and password ...</h1>
+<h1><?php echo $_SESSION['message'] ; ?></h1>
 
 <h1 class='m-5'><a href='../learner/studentRegistration.php'>new to besquare</a></h1>  
-<h1 class='m-5'><a href='../learner/studentSignin.php'>try login again</a></h1>  
+<h1 class='m-5'><a href='../learner/studentSignin.php'>try login again</a></h1>
+
+<?php
+
+exit();
+
+?>  
 </body>
 </html>

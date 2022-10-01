@@ -16,8 +16,7 @@
  <input type="hidden" name="firstname" class="someInputs" value='bypass' >
   <span class="msgFn errorField"></span>
 </div>
-  <div> <input class="someInputs" type="hidden" id="lname" name="lname"  value='bypass'>
-  <span class="msgln errorField"></span></div>
+ 
 
   <div><input type="hidden" class="someInputs"  id="mNumber" name="mNumber"  value='0987654321'>
   <span class="msgmN errorField"></span></div>
@@ -32,7 +31,11 @@
  
 
 
-<input type="submit" id="submit" name='submit' value="login" ></div>
+<input type="submit" id="submit" name='submit' value="login" >
+<p class='mt-5'>dont have any account</p>
+<button ><a href='studentRegistration.php'>register</a></button> 
+
+</div>
 </form>
 </body>
 

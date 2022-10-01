@@ -1,4 +1,14 @@
-<?php include '../frameworks/bootstrap.php' ; ?>
+
+
+<?php  
+include '../sqlcon_sesSt/sessionSt.php';
+if (!empty($_SESSION['message'])){
+  session_destroy();
+}
+  
+
+
+include '../frameworks/bootstrap.php' ; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +23,9 @@
 <form method="POST" onsubmit='return validate()' name='myform' action="../actions/registernewaccount.php" >
 
   <div>
-  <p>First Name:</p><input type="text" name="firstname" class="someInputs" >
+  <p>Name:</p><input type="text" name="firstname" class="someInputs" >
   <span class="msgFn errorField"></span>
 </div>
-  <div> <p>Last Name:</p><input class="someInputs" type="text" id="lname" name="lname">
-  <span class="msgln errorField"></span></div>
 
   <div><p>Mobile:</p><input type="text" class="someInputs"  id="mNumber" name="mNumber">
   <span class="msgmN errorField"></span></div>
@@ -33,6 +41,9 @@
 
 
 <input type="submit" id="submit" name='submit' value="Register" ></div>
+
+<p class='mt-5' >already registered</p>
+<button><a href='studentSignin.php' >login now</a></button>
 </form>
 </body>
 

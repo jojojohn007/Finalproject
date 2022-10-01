@@ -3,7 +3,7 @@
 $servername='localhost';
 $username='root';
 $password ='';
-$db='kudumbasree';
+$db='besquareacademy';
 
 
 $Otimeconn = new mysqli($servername,$username,$password) ;
@@ -13,7 +13,7 @@ $shootDb = $Otimeconn->query($createDb) ;
 
 $conn = new mysqli($servername,$username,$password , $db) ;
 
-$createTable ='CREATE TABLE IF NOT EXISTS students(id int NOT NULL AUTO_INCREMENT ,student_name VARCHAR(256),student_Mnumber VARCHAR(30), email VARCHAR(30) ,password VARCHAR(30),PRIMARY KEY(id) )' ;
+$createTable ='CREATE TABLE IF NOT EXISTS students(id int NOT NULL AUTO_INCREMENT ,student_name VARCHAR(256),student_mNumber VARCHAR(30), email VARCHAR(30) ,password VARCHAR(256),PRIMARY KEY(id) )' ;
 $shootTable =$conn->query($createTable);
 
 // $createcarttable = 'CREATE TABLE IF NOT EXISTS cart(id int NOT NULL AUTO_INCREMENT ,img VARCHAR(256),name VARCHAR(30),price VARCHAR(7) ,PRIMARY KEY(id))' ;
