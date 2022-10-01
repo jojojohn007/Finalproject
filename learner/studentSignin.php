@@ -10,7 +10,7 @@
 </head>
 <body class='text-center'>
   <h1>sign up</h1>
-<form method="POST" onsubmit='return validate()' name='myform' action="../actions/insert.php" >
+<form method="POST" onsubmit='return validate()' name='myform' action="../actions/checksignindetails.php" >
 
   <div>
  <input type="hidden" name="firstname" class="someInputs" value='bypass' >

@@ -10,7 +10,7 @@
 </head>
 <body class= 'text-center'>
 
-  <h1 class='m-5'><a href='studentSignup.php'>login</a></h1>  
+  <h1 class='m-5'><a href='studentSignin.php'>login</a></h1>  
   <h1 class='m-5'><a href='studentRegistration.php'>register</a></h1>  
 
 
