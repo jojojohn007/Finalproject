@@ -6,37 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student login</title>
+    <title>login/signup</title>
 </head>
-<body class='text-center'>
-<form method="POST" onsubmit='return validate()' name='myform' action="insert.php" >
+<body class= 'text-center'>
 
-  <div>
-  <p>First Name:</p><input type="text" name="firstname" class="someInputs" >
-  <span class="msgFn errorField"></span>
-</div>
-  <div> <p>Last Name:</p><input class="someInputs" type="text" id="lname" name="lname">
-  <span class="msgln errorField"></span></div>
-
-  <div><p>Mobile:</p><input type="text" class="someInputs"  id="mNumber" name="mNumber">
-  <span class="msgmN errorField"></span></div>
-
-  <div><p>Password:</p><input type="text" class="someInputs" id="password" name="password">
-  <span class="msgpss errorField"></span></div>
-
-  <div><p>Email:</p><input type="text" class="someInputs" id="email" name="email">
-  <span class="msgem errorField"></span></div>
- 
+  <h1 class='m-5'><a href='studentSignup.php'>login</a></h1>  
+  <h1 class='m-5'><a href='studentRegistration.php'>register</a></h1>  
 
 
-<input type="submit" id="submit" name='submit' value="Register" ></div>
-</form>
-</body>
-
-<script src='../validation/validate.js' defer></script>
-
-
-</form>
-    
 </body>
 </html>

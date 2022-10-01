@@ -28,10 +28,10 @@ else{Lname = true ;} ;
 if(!regexNumber.test(mob)) { errorFields[2].textContent = "Enter a valid mobile number !" ;}
 else{Mob = true ; } ;
 
-if(pass.length<8) { errorFields[3].textContent = "Enter a valid password !" ; }
+if(pass.length<8) { errorFields[4].textContent = "Enter a valid password !" ; }
 else{Pass = true ; } ;
 
-if(!regexEmail.test(email)) { errorFields[4].textContent = "Enter a valid Email !" ;  }
+if(!regexEmail.test(email)) { errorFields[3].textContent = "Enter a valid Email !" ;  }
 else{Email = true ; } ;
 
 fade();
