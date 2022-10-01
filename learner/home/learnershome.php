@@ -1,18 +1,6 @@
-<?php  include '../../sqlcon_sesSt/sessionSt.php'; 
 
-
-include '../../frameworks/bootstrap.php' ; 
-
-
+<?php  include '../learnerheader/header.php'; 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
    
 
@@ -48,24 +36,24 @@ include '../../frameworks/bootstrap.php' ;
 <table class="table table-white">
   <thead>
     <tr>
-      <th scope="col">my course</th>
+      <th scope="col  px-5">my course</th>
       <th scope="col"></th>
       
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a class='link'>progress</a></th>
+      <th scope="row"><a class='link  px-5' id='progress' href='#'>progress</a></th>
     </tr>
     <tr>
-      <th scope="row"><a class='link' >badges</a></th>
+      <th scope="row"><a class='link  px-5' href='#' id='badges' >badges</a></th>
     </tr>
   </tbody>
 </table>
-<table class="table table-white">
+<table class="table table-white px-5">
   <thead>
     <tr>
-      <th scope="col">my Account</th>
+      <th scope="col  px-5">my Account</th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -74,20 +62,41 @@ include '../../frameworks/bootstrap.php' ;
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a class='link'>my profile</a></th>
+      <th scope="row"><a class='link  ' href='#' id='myprofile'>my profile</a></th>
     </tr>
     <tr>
-      <th scope="row"><a class='link' >teachers</a></th>
+      <th scope="row"><a class='link ' href='#' id='teachers' >teachers</a></th>
     </tr>
   </tbody>
 </table>
 </div>
 </section>
 
-<section class='row bg-black d-inline-block p-5'>
+<section class='row  d-inline-block p-5'>
     <div class='col-6 items p-5'>
         
 </div>
 </section>
+<script src='../../frameworks/jquery.js'></script>
+<script>
+$(document).ready(function(){
+    $('.items').load('./progress.php')
+   
+    
+    $('#progress').click(function(){
+        $('.items').load('./progress.php')
+    })
+    $('#badges').click(function(){
+        $('.items').load('./badges.php')
+    })
+    $('#myprofile').click(function(){
+        $('.items').load('./myprofile.php')
+    })
+    $('#teachers').click(function(){
+        $('.items').load('./teachers.php')
+    })
+})
+
+</script>
 </body>
 </html>
