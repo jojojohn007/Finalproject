@@ -12,11 +12,14 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">logo <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">logo </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">courses</a>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="#">status</a>
       </li>
@@ -77,24 +80,32 @@
         
 </div>
 </section>
+
+
 <script src='../../frameworks/jquery.js'></script>
 <script>
 $(document).ready(function(){
-    $('.items').load('./progress.php')
-   
-    
+
+
+
+
+  //dynamichero
+
+    $('.items').load('./dynamichero/progress.php')
+
     $('#progress').click(function(){
-        $('.items').load('./progress.php')
+   $('.items').load('./dynamichero/progress.php')
     })
     $('#badges').click(function(){
-        $('.items').load('./badges.php')
+        $('.items').load('./dynamichero/badges.php')
     })
     $('#myprofile').click(function(){
-        $('.items').load('./myprofile.php')
+        $('.items').load('./dynamichero/myprofile.php')
     })
     $('#teachers').click(function(){
-        $('.items').load('./teachers.php')
+        $('.items').load('./dynamichero/teachers.php')
     })
+
 })
 
 </script>
