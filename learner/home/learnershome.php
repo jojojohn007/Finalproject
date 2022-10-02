@@ -1,38 +1,16 @@
 
-<?php  include '../learnerheader/header.php'; 
+<?php  include '../learnerheader/frameworks.php'; 
 ?>
+<style>
+.dropdown :hover .dropdown ul {
+  display: block;
+}
+</style>
 <body>
    
+<header class='header'>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"> welcome <?php echo $_SESSION['username'] ;?></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">logo </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home </a>
-      </li>
-      <li class="nav-item">
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="#">status</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">settings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href='../../sqlcon_sesSt/sessionDy.php'>logout</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+</header>
 <!-- banner -->
 <section class='row d-inline-block'>
     <div class='col-6'>
@@ -87,8 +65,8 @@
 $(document).ready(function(){
 
 
-
-
+//dynamic header
+$('.header').load('../learnerheader/header.php')
   //dynamichero
 
     $('.items').load('./dynamichero/progress.php')
