@@ -1,5 +1,10 @@
 <?php 
 include '../../sqlcon_sesSt/sessionSt.php';
+if(!isset($_SESSION['username'])){
+
+  include '../../sqlcon_sesSt/sessionDy.php';
+  header ('location:../../learner/studentSigning.php' );
+}
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,7 +27,7 @@ include '../../sqlcon_sesSt/sessionSt.php';
         <li>  <a class="nav-link" href="#">class 2 </a></li>
         <li>  <a class="nav-link" href="#">class 3 </a></li>
         <li>  <a class="nav-link" href="#">class 4 </a></li>
-        <li>  <a class="nav-link" href="navbaritems/class5.php">class 5 </a></li>
+        <li>  <a class="nav-link" href="class5.php">class 5 </a></li>
       </ul>
       </li>
       

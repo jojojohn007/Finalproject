@@ -1,4 +1,20 @@
-<?php  include '../../../frameworks/bootstrap.php'; 
+<?php  include '../../frameworks/bootstrap.php'; 
+?>
+<?php
+if(isset($_SERVER['HTTPS'])&& ($_SERVER['HTTPS']=='on' ||
+$_SERVER['HTTPS']==1)||
+isset( $_SERVER['HTTP_X_FORWARDED_PROTO'])&& $_SERVER['HTTP_X_FORWARDED_PROTO']=='https'){
+$ssl = 'https';
+}else {
+  $ssl='http';
+}
+
+$app_url = ($ssl)
+."://".$_SERVER['HTTP_HOST']
+.(dirname($_SERVER['SCRIPT_NAME'])==DIRECTORY_SEPARATOR?'':'/')
+.trim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])),'/');
+
+echo $app_url;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,9 +70,10 @@
   </div>
 </nav>
  </header>
+ <div class='videoload'></div>
  <section class='row'>
     <h2>Multi-digit addition</h2>
-<div class='col-sm-3  vid1' onclick='pop(this)' >
+<div class='col-sm-3  vid1'  >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="class5-items/cardprofiles/numbers.jpg" alt="Card image cap">
   <div class="card-body">
@@ -103,10 +120,22 @@
     
 </body>
 <script defer>  
-   $(document).load('../learnershome.php') 
 function pop() {
     
-}
+  }
+  //  $(document).load('../learnershome.php') 
+
+   $('.vid1').click(function(){
+    // let videocard = this.classList[1]
+    // console.log(videocard)
+    // $('.videoload').load('../../../actions/c5_videoload.php' ,{
+    //    videocardname : videocard
+    //   })
+   
+    // // this.parentElement.style.display='none'
+    // $('.header').remove()
+   }) 
+
 
 </script>
 </html>

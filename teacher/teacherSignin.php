@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student signup</title>
+    <title>teacher signup</title>
 </head>
 <body class='text-center'>
   <h1>sign up</h1>
@@ -33,14 +33,15 @@
 
 <input type="submit" id="submit" name='submit' value="login" >
 <p class='mt-5'>dont have any account</p>
-<button ><a href='studentRegistration.php'>register</a></button> 
+<button ><a href='teacherRegistration.php'>register</a></button> 
 
 </div>
-<input type="hidden" name="student" class="someInputs" value='bypass' >
+<input type="hidden" name="teacher" class="someInputs" value='bypass' >
 </form>
 </body>
 
 <script src='../validation/validate.js' defer></script>
+
 
 
     

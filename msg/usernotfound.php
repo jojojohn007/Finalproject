@@ -17,9 +17,17 @@
 
     
 <h1><?php echo $_SESSION['message'] ; ?></h1>
+<?php if(isset($_SESSION['student'])){ ?>
 
 <h1 class='m-5'><a href='../learner/studentRegistration.php'>new to besquare</a></h1>  
 <h1 class='m-5'><a href='../learner/studentSignin.php'>try login again</a></h1>
+<?php } ?>
+
+<?php if(isset($_SESSION['teacher'])){ ?>
+
+<h1 class='m-5'><a href='../teacher/teacherRegistration.php'>new to besquare</a></h1>  
+<h1 class='m-5'><a href='../teacher/teacherSignin.php'>try login again</a></h1>
+<?php } ?>
 
 <?php
 
