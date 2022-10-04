@@ -29,6 +29,12 @@
 <h1 class='m-5'><a href='../teacher/teacherSignin.php'>try login again</a></h1>
 <?php } ?>
 
+<?php if(isset($_SESSION['parent'])){ ?>
+
+<h1 class='m-5'><a href='../parent/parentRegistration.php'>new to besquare</a></h1>  
+<h1 class='m-5'><a href='../parent/parentSignin.php'>try login again</a></h1>
+<?php } ?>
+
 <?php
 
 exit();

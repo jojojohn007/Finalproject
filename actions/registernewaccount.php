@@ -101,6 +101,59 @@ if(isset($_POST['teacher'])){
     }
     
     }
+
+    
+//parent
+
+if(isset($_POST['parent'])){
+    echo 'hiii' ;
+    $username = $_POST['firstname'];
+    $email = $_POST['email'] ;
+    $number = $_POST['mNumber'];
+    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    
+    
+    
+    // $insertData = 'INSERT INTO  `students_details` VALUES ( , name="'.$username.'" , profile = "none" ,email="'.$email.'" , sap_id="'.$sapId.'" , cgpa = "'.$cgpa.'" , contact = "'.$contact.'" , password = "'.$password.'" ) ';
+    $dataselect = 'SELECT * FROM parents WHERE parent_name="'.$username.'"   ' ;
+    $check=$conn->query($dataselect);
+    $row = mysqli_fetch_assoc($check);
+    
+    
+    
+    
+    $_SESSION['myname'] = "" ;
+    $_SESSION['emptymsg'] = "";
+    
+    
+    
+    
+    if($row['name']){
+        $_SESSION['repeatedName'] = "<script>
+        let msg = document.getElementById('errorfield') ;
+        msg.textContent = 'username already taken !'
+        fade();
+        </script>";
+        header('location:register.php') ;
+    }else if( !$username== NULL) {
+        $insertData ="INSERT INTO `parents`( `parent_name`, `parent_Mnumber`, `email`, `password`) VALUES ('$username','$number','$email','$password')" ;
+    $sql = $conn->query($insertData);
+        header("location:../parent/parentSignin.php");
+    }
+    
+    
+    if($username == ''){
+        $_SESSION['repeatedName'] = "";
+    $_SESSION['emptymsg'] = "<script>
+    let msg1 = document.getElementById('msgForEmpty') ;
+    msg1.textContent = 'please fill your input fields !';
+    fade()
+    </script>";
+    header("location:register.php");
+    
+    }
+    
+    }
     
  
     

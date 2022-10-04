@@ -19,6 +19,9 @@ $shootTable =$conn->query($createTable);
 $createTable ='CREATE TABLE IF NOT EXISTS teachers(id int NOT NULL AUTO_INCREMENT ,teacher_name VARCHAR(256),teacher_mNumber VARCHAR(30), email VARCHAR(30) ,password VARCHAR(256),PRIMARY KEY(id) )' ;
 $shootTable =$conn->query($createTable);
 
+$createTable ='CREATE TABLE IF NOT EXISTS parents(id int NOT NULL AUTO_INCREMENT ,parent_name VARCHAR(256),parent_mNumber VARCHAR(30), email VARCHAR(30) ,password VARCHAR(256),PRIMARY KEY(id) )' ;
+$shootTable =$conn->query($createTable);
+
 // $createcarttable = 'CREATE TABLE IF NOT EXISTS cart(id int NOT NULL AUTO_INCREMENT ,img VARCHAR(256),name VARCHAR(30),price VARCHAR(7) ,PRIMARY KEY(id))' ;
 // $shoottable= $conn->query($createcarttable);
 

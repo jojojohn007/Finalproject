@@ -12,6 +12,6 @@
 
   <h1 class='m-5'><a href='learner/index.php'>student</a></h1>  
   <h1 class='m-5'><a href='teacher/index.php'>teacher</a></h1> 
-  <h1 class='m-5'><a href='learner/index.php'>parent</a></h1> 
+  <h1 class='m-5'><a href='parent/index.php'>parent</a></h1> 
 </body>
 </html>
