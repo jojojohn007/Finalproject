@@ -1,33 +1,35 @@
 <?php  include '../../frameworks/bootstrap.php'; 
+include 'actions/getpageurl.php';
 ?>
-<?php
-if(isset($_SERVER['HTTPS'])&& ($_SERVER['HTTPS']=='on' ||
-$_SERVER['HTTPS']==1)||
-isset( $_SERVER['HTTP_X_FORWARDED_PROTO'])&& $_SERVER['HTTP_X_FORWARDED_PROTO']=='https'){
-$ssl = 'https';
-}else {
-  $ssl='http';
-}
 
-$app_url = ($ssl)
-."://".$_SERVER['HTTP_HOST']
-.(dirname($_SERVER['SCRIPT_NAME'])==DIRECTORY_SEPARATOR?'':'/')
-.trim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])),'/');
-
-echo $app_url;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' >
     <title>class5</title>
-    <script src='../../../frameworks/jquery.js'></script>
+    <script src='jquery.js'></script>
  <style>
-    .dropdown {
-        display: none;
-    }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
  </style>
 
@@ -44,11 +46,11 @@ echo $app_url;
         <a class="nav-link" href="#">logo </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="../learnershome.php">Home </a>
+        <a class="nav-link" href="../home/learnershome.php">Home </a>
       </li>
       <li class="nav-item dropdown">
       <a class="nav-link " href="#">Select course </a>
-      <ul class=''>
+      <ul class='dropdown-content'>
         <li>  <a class="nav-link" href="#">class 1 </a></li>
         <li>  <a class="nav-link" href="#">class 2 </a></li>
         <li>  <a class="nav-link" href="#">class 3 </a></li>
@@ -61,7 +63,7 @@ echo $app_url;
         <a class="nav-link" href="#">status</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">settings</a>
+        <a class="nav-link " href="#">settings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href='../../sqlcon_sesSt/sessionDy.php'>logout</a>
@@ -73,7 +75,7 @@ echo $app_url;
  <div class='videoload'></div>
  <section class='row'>
     <h2>Multi-digit addition</h2>
-<div class='col-sm-3  vid1'  >
+<div class='col-sm-3  prg' call_type='programme1'  >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="class5-items/cardprofiles/numbers.jpg" alt="Card image cap">
   <div class="card-body">
@@ -81,7 +83,7 @@ echo $app_url;
   </div>
 </div>
 </div>
-<div class='col-sm-3 ex-1' >
+<div class='col-sm-3 prg' call_type='programme2' >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
   <div class="card-body">
@@ -89,7 +91,7 @@ echo $app_url;
   </div>
 </div>
 </div>
-<div class='col-sm-3  ex-2' >
+<div class='col-sm-3 prg' call_type='programme3' >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top " src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
   <div class="card-body">
@@ -98,7 +100,7 @@ echo $app_url;
 </div>
 </div>
 
-<div class='col-sm-3  ex-3' >
+<div class='col-sm-3  prg' call_type='programme4' >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
   <div class="card-body">
@@ -107,7 +109,7 @@ echo $app_url;
 </div>
 </div>
 
-<div class='col-sm-3 mt-5 ex-4' >
+<div class='col-sm-3 mt-5 prg ' call_type='programme5' >
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
   <div class="card-body">
@@ -117,25 +119,59 @@ echo $app_url;
 </div>
 
 </section>
-    
+  <hr>
+  <section class='row'>
+    <h2>Multi-digit addition</h2>
+<div class='col-sm-3  prg' call_type='programme1'  >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="class5-items/cardprofiles/numbers.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<div class='col-sm-3 prg' call_type='programme2' >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<div class='col-sm-3 prg' call_type='programme3' >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top " src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+
+<div class='col-sm-3  prg' call_type='programme4' >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+
+<div class='col-sm-3 mt-5 prg ' call_type='programme5' >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="class5-items/cardprofiles/exercise.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+
+</section>
 </body>
 <script defer>  
-function pop() {
-    
-  }
-  //  $(document).load('../learnershome.php') 
 
-   $('.vid1').click(function(){
-    // let videocard = this.classList[1]
-    // console.log(videocard)
-    // $('.videoload').load('../../../actions/c5_videoload.php' ,{
-    //    videocardname : videocard
-    //   })
-   
-    // // this.parentElement.style.display='none'
-    // $('.header').remove()
-   }) 
-
+  var pageurl = '<?php echo $app_url; ?>/'; 
+</script>
+<script src='actions/changeurl.js'>
 
 </script>
 </html>

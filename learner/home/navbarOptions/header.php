@@ -1,5 +1,5 @@
 <?php 
-include '../../sqlcon_sesSt/sessionSt.php';
+include '../../../sqlcon_sesSt/sessionSt.php';
 if(!isset($_SESSION['username'])){
 
   session_destroy() ;
@@ -45,7 +45,7 @@ if(!isset($_SESSION['username'])){
         <a class="nav-link" href="#">logo </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home </a>
+        <a class="nav-link" href="../learnershome.php">Home </a>
       </li>
       <li class="nav-item dropdown">
       <a class="nav-link " href="#">Select course </a>
@@ -54,18 +54,18 @@ if(!isset($_SESSION['username'])){
         <li>  <a class="nav-link" href="#">class 2 </a></li>
         <li>  <a class="nav-link" href="#">class 3 </a></li>
         <li>  <a class="nav-link" href="#">class 4 </a></li>
-        <li>  <a class="nav-link" href="class5.php">class 5 </a></li>
+        <li>  <a class="nav-link" href="../class5.php">class 5 </a></li>
       </ul>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="../home/navbarOptions/status.php">status</a>
+        <a class="nav-link" href="status.php">status</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="../home/navbarOptions/settings.php">settings</a>
+        <a class="nav-link " href="settings.php">settings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href='../../sqlcon_sesSt/sessionDy.php'>logout</a>
+        <a class="nav-link " href='../../../sqlcon_sesSt/sessionDy.php'>logout</a>
       </li>
     </ul>
   </div>
