@@ -1,5 +1,5 @@
 <?php 
-include '../../sqlcon_sesSt/sessionSt.php';
+include '../../../sqlcon_sesSt/sessionSt.php'; 
 if(!isset($_SESSION['username'])){
 
   session_destroy() ;
@@ -59,10 +59,10 @@ if(!isset($_SESSION['username'])){
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="../home/navbarOptions/status.php">status</a>
+        <a class="nav-link" href="navbarOptions/status.php">status</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="../home/navbarOptions/settings.php">settings</a>
+        <a class="nav-link " href="navbarOptions/settings.php">settings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href='../../sqlcon_sesSt/sessionDy.php'>logout</a>

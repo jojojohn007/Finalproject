@@ -61,7 +61,7 @@ img {
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Profile</a>
                 </li>
             </ul>
-            <form  onsubmit='return validate()' action='../../../../actions/updateStudentdetails.php' name="myform">
+            <form  onsubmit='return validate()' action='../../../actions/updateStudentdetails.php' method='post' name="myform">
                 <div class="row mt-5 align-items-center">
                     <div class="col-md-3 text-center mb-5">
                         <div class="avatar avatar-xl">

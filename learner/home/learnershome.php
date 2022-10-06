@@ -1,5 +1,5 @@
 
-<?php  include '../learnerheader/frameworks.php'; 
+<?php  include 'learnerheader/frameworks.php'; 
 ?>
 <style>
   .dropdown {
@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 
 //dynamic header
-$('.header').load('../learnerheader/header.php')
+$('.header').load('learnerheader/header.php')
   //dynamichero
 
     $('.items').load('./dynamichero/progress.php')

@@ -9,71 +9,8 @@ include '../actions/getpageurl.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script  defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+<link rel='stylesheet' href='programme.css'>
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
-    background-color: #555;
-    color: #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 700px;
-}
-.container > p{
-    font-size: 32px;
-}
-
-.options{
-    position: relative;
-    padding-left: 40px;
-}
-#options span{
-    display: block;
-    margin-bottom: 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
-/* .options input{
-    opacity: 0;
-} */
-.checkmark {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #555;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-}
-
-.btn-primary{
-    background-color: #555;
-    color: #ddd;
-    border: 1px solid #ddd;
-}
-.btn-primary:hover{
-    background-color: #21bf73;
-    border: 1px solid #21bf73;
-}
-.btn-success{
-    padding: 5px 25px;
-    background-color: #21bf73;
-}
-@media(max-width:576px){
-    .question{
-        width: 100%;
-        word-spacing: 2px;
-    } 
-}
-</style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,7 +40,7 @@ include '../actions/getpageurl.php';
         </div>
     </div>
     <div class='float-end message text-center col-3'>
-        <span class='col-2'>Write answer !</span>
+        <span class='col-2 msg-span'>Write answer !</span>
     <img class='img-fluid float-end m-0'   atl='' src='../actions/sparkles.gif'>
     </div>
     <hr>

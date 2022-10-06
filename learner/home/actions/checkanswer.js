@@ -3,10 +3,12 @@
    document.querySelector('.value2').value
 
     const message = document.querySelector('.message')
+    let msg=document.querySelector('.msg-span')
    
+    console.log(msg)
     message.style.display='none'
 
-   console.log($(document).find('meta[name=description].content'))
+   
 let randomN1 =Math.floor(Math.random()* (999 -100 ))+100
 let randomN2 =Math.floor(Math.random()* (999 -100 ))+100
 
@@ -19,7 +21,6 @@ document.querySelector('.value2').textContent = randomN2
 
 function continueon(){
  window.location.replace(pageurl+nextpage)
-console.log(pageurl)
     
 }
 
@@ -44,12 +45,14 @@ document.addEventListener('keyup', (event) => {
     var code = event.code;
 
     let answer=  document.getElementById('answer').value
-console.log(answer)
+
     if(answer  == (randomN1+randomN2)){
-        message.style.display='inline-block'
-        
+      
+     
       
         if(!(document.querySelector('.continue'))){
+            message.style.display='block'
+            msg.classList.add('animate')
             document.querySelector('.btn-info').remove()
 let continuebtn = document.createElement('button')
 continuebtn.classList.add( 'continue', 'btn' , 'btn-success')
